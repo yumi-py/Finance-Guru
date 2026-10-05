@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Newsreader", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-paper: #F7F6F2;
+  --color-paper-muted: #EFECE6;
+  --color-ink: #171717;
+  --color-ink-muted: #66645F;
+  --color-border-subtle: #D9D7D0;
+  --color-accent-forest: #2E5A44;
+  --color-accent-forest-hover: #224333;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F7F6F2;
+  color: #171717;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Editorial prose reading styling */
+.editorial-prose {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #262522;
+}
+
+.editorial-prose p {
+  margin-bottom: 1.65rem;
+}
+
+.editorial-prose h2 {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #171717;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+}
+
+.editorial-prose h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #171717;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.editorial-prose ul, .editorial-prose ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem;
+  padding-left: 1.5rem;
+}
+
+.editorial-prose li {
+  margin-bottom: 0.65rem;
+  line-height: 1.75;
+}
+
+.editorial-prose blockquote {
+  border-left: 2px solid #2E5A44;
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #383733;
+}
+
+.editorial-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 0.95rem;
+}
+
+.editorial-prose th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #171717;
+  font-weight: 600;
+  color: #171717;
+  font-family: var(--font-sans);
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.editorial-prose td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #D9D7D0;
+  font-variant-numeric: tabular-nums;
+}
+
+.editorial-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background-color: #EFECE6;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid #2E5A44;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

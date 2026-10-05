@@ -1,0 +1,6 @@
+{
+  "name": "Ledger & Reason — Personal Finance Journal",
+  "description": "An editorial personal finance publication offering clear, evidence-based insights on saving, long-term index investing, financial independence, and money psychology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
