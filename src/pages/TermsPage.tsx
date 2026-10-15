@@ -4,9 +4,9 @@ export function TermsPage() {
   return (
     <>
       <SEOHead
-        title="Terms of Use — Finance Guru"
+        title="Terms of Use & Legal Terms — Finance Guru"
         description="Terms of use and essential educational disclaimers for Finance Guru personal finance publication."
-        canonicalPath="/terms"
+        canonicalPath="/terms/"
       />
 
       <main className="max-w-5xl mx-auto px-6 pt-16 pb-24">

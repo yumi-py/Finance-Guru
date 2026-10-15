@@ -6,7 +6,7 @@ export function PrivacyPage() {
       <SEOHead
         title="Privacy Policy — Finance Guru"
         description="Our privacy pledge: zero third-party tracking cookies, no surveillance advertising, and complete respect for reader privacy."
-        canonicalPath="/privacy"
+        canonicalPath="/privacy/"
       />
 
       <main className="max-w-5xl mx-auto px-6 pt-16 pb-24">

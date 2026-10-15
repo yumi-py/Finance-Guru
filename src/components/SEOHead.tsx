@@ -5,6 +5,8 @@ interface SEOHeadProps {
   description: string;
   canonicalPath?: string;
   type?: 'website' | 'article';
+  keywords?: string;
+  noindex?: boolean;
   schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -15,6 +17,8 @@ export function SEOHead({
   description,
   canonicalPath = '',
   type = 'website',
+  keywords,
+  noindex = false,
   schema,
 }: SEOHeadProps) {
   useEffect(() => {
@@ -30,8 +34,29 @@ export function SEOHead({
     }
     metaDesc.setAttribute('content', description);
 
-    // 3. Canonical link
+    // 3. Meta robots
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.setAttribute('name', 'robots');
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.setAttribute('content', noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+
+    // 4. Meta keywords (if provided)
+    if (keywords) {
+      let metaKw = document.querySelector('meta[name="keywords"]');
+      if (!metaKw) {
+        metaKw = document.createElement('meta');
+        metaKw.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKw);
+      }
+      metaKw.setAttribute('content', keywords);
+    }
+
+    // 5. Canonical link
     const cleanPath = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
+    // Preserve trailing slash if present on path
     const fullCanonicalUrl = `${BASE_URL}${cleanPath === '/' ? '' : cleanPath}`;
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {
@@ -41,7 +66,7 @@ export function SEOHead({
     }
     linkCanonical.setAttribute('href', fullCanonicalUrl);
 
-    // 4. OpenGraph tags
+    // 6. OpenGraph tags helper
     const updateMeta = (attrName: string, attrVal: string, contentVal: string) => {
       let el = document.querySelector(`meta[${attrName}="${attrVal}"]`);
       if (!el) {
@@ -58,12 +83,12 @@ export function SEOHead({
     updateMeta('property', 'og:type', type);
     updateMeta('property', 'og:site_name', 'Finance Guru');
 
-    // 5. Twitter tags
+    // 7. Twitter tags
     updateMeta('name', 'twitter:title', title);
     updateMeta('name', 'twitter:description', description);
     updateMeta('name', 'twitter:card', 'summary_large_image');
 
-    // 6. JSON-LD structured data
+    // 8. JSON-LD structured data
     let scriptJsonLd = document.getElementById('seo-json-ld');
     if (schema) {
       if (!scriptJsonLd) {
@@ -76,11 +101,7 @@ export function SEOHead({
     } else if (scriptJsonLd) {
       scriptJsonLd.remove();
     }
-
-    return () => {
-      // Cleanup on unmount if needed
-    };
-  }, [title, description, canonicalPath, type, schema]);
+  }, [title, description, canonicalPath, type, keywords, noindex, schema]);
 
   return null;
 }

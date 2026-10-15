@@ -1,12 +1,14 @@
 import { SEOHead } from '../components/SEOHead';
 import { Link } from '../context/RouterContext';
+import { AUTHORS } from '../data/authors';
+import { ShieldCheck, Award, ArrowRight, BookOpen } from 'lucide-react';
 
 export function AboutPage() {
   const aboutSchema = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     name: 'About Finance Guru',
-    description: 'Our editorial charter, investment principles, and commitment to independent personal finance analysis.',
+    description: 'Our educational charter, investment principles, and commitment to independent, evidence-based financial literacy.',
     publisher: {
       '@type': 'Organization',
       name: 'Finance Guru',
@@ -17,73 +19,110 @@ export function AboutPage() {
   return (
     <>
       <SEOHead
-        title="About — Finance Guru"
-        description="Our editorial charter, investment principles, and commitment to independent, evidence-based personal finance analysis."
-        canonicalPath="/about"
+        title="About Finance Guru — Editorial Mission & Standards"
+        description="Our educational charter, investment principles, and commitment to independent, evidence-based personal finance literacy."
+        canonicalPath="/about/"
         schema={aboutSchema}
       />
 
-      <main className="max-w-5xl mx-auto px-6 pt-16 pb-24">
-        <header className="max-w-[740px] mx-auto pb-12 border-b border-[#D9D7D0]">
-          <div className="text-xs uppercase tracking-widest text-[#2E5A44] font-medium mb-4">
-            Mission &amp; Methodology
+      <main className="max-w-5xl mx-auto px-6 pt-16 pb-24 text-left">
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" className="mb-8 text-xs text-[#66645F] flex items-center gap-2">
+          <Link to="/" className="hover:text-[#171717] transition-colors">Home</Link>
+          <span aria-hidden="true">/</span>
+          <span className="text-[#171717] font-medium">About</span>
+        </nav>
+
+        <header className="max-w-[760px] pb-12 border-b border-[#D9D7D0]">
+          <div className="text-xs uppercase tracking-widest text-[#2E5A44] font-mono font-medium mb-4">
+            Mission &amp; Governance
           </div>
           <h1 className="text-4xl sm:text-5xl font-serif font-normal tracking-tight text-[#171717]">
-            An independent journal on wealth and reason.
+            Empowering Lifelong Financial Independence
           </h1>
           <p className="mt-6 text-xl text-[#66645F] leading-relaxed font-sans">
-            We publish long-form research, empirical analyses, and thoughtful essays to help readers build durable financial autonomy without panic or speculative hype.
+            Finance Guru was founded to demystify personal finance, budgeting, index investing, and taxes. We provide everyday learners with accessible, reproducible mathematical guidance without commercial sponsorship.
           </p>
         </header>
 
-        <div className="max-w-[740px] mx-auto pt-12 editorial-prose">
-          <h2>The Problem with Modern Financial Media</h2>
-          <p>
-            The mainstream financial web is engineered for velocity and agitation. Algorithms prioritize dramatic market forecasts, speculative asset pumps, and sensational headlines designed to induce fear or euphoria. The underlying business model relies on affiliate commissions from credit card issuers, personal loans, and speculative brokerages.
-          </p>
-          <p>
-            When financial information is monetized through trading volume and consumer debt generation, the consumer’s long-term solvency is compromised.
-          </p>
+        <div className="max-w-[760px] pt-12 space-y-12 editorial-prose">
+          <section>
+            <h2 className="text-2xl font-serif font-medium text-[#171717]">The Problem with Modern Financial Media</h2>
+            <p className="text-[#66645F] leading-relaxed">
+              Mainstream personal finance websites are predominantly engineered for transaction velocity. Search results are congested with credit card referral lists, predatory debt consolidation lead-forms, and sensational forecasts designed to induce impulsive trading.
+            </p>
+            <p className="text-[#66645F] leading-relaxed">
+              When financial media monetizes consumer borrowing and trading fees, the reader’s long-term solvency takes a back seat. We reject this broken model.
+            </p>
+          </section>
 
-          <h2>Our Foundational Thesis</h2>
-          <p>
-            Finance Guru was founded on a contrary conviction: durable wealth creation is quiet, mathematically straightforward, and profoundly psychological. It requires neither esoteric algorithms nor constant portfolio intervention.
-          </p>
-          <p>
-            We focus exclusively on first principles:
-          </p>
-          <ul className="list-disc">
-            <li><strong>Solvency Before Yield:</strong> Cash reserves and structural liquidity must always precede risk-asset allocations.</li>
-            <li><strong>Broad-Market Indexing:</strong> The mathematical certainty of low-cost compounding beats active speculation over thirty-year horizons.</li>
-            <li><strong>Behavioral Immunity:</strong> Managing lifestyle creep, envy, and emotional loss aversion matters far more than forecasting interest rates.</li>
-            <li><strong>Radical Transparency:</strong> Total independence from undisclosed commercial sponsors or product placement.</li>
-          </ul>
+          <section>
+            <h2 className="text-2xl font-serif font-medium text-[#171717]">Our Foundational Principles</h2>
+            <ul className="list-disc pl-6 space-y-2 text-[#66645F]">
+              <li><strong>Solvency Before Yield:</strong> An airtight cash reserve in high-yield savings must always precede risk-asset allocations.</li>
+              <li><strong>Broad-Market Compounding:</strong> Low-cost, passive index compounding mathematically outperforms speculative active picking over multi-decade horizons.</li>
+              <li><strong>Behavioral Immunity:</strong> Emotional composure, resisting lifestyle inflation, and steady automated deposits matter far more than predicting interest rate cycles.</li>
+              <li><strong>Radical Transparency:</strong> Absolute independence from secret commercial sponsorships or product placement.</li>
+            </ul>
+          </section>
 
-          <blockquote>
-            True wealth is not measured in luxury display; it is measured in the unhurried autonomy of your daily hours.
-          </blockquote>
+          {/* Author Board Section */}
+          <section className="pt-6 border-t border-[#D9D7D0]">
+            <h2 className="text-2xl font-serif font-medium text-[#171717] mb-6">
+              Our Editorial &amp; Analytical Contributors
+            </h2>
+            <p className="text-[#66645F] leading-relaxed mb-8">
+              All guides and calculators on Finance Guru are researched, authored, and reviewed by credentialed practitioners who prioritize mathematical truth:
+            </p>
 
-          <h2>Our Editorial Standards</h2>
-          <p>
-            Every essay published on this site undergoes a three-stage verification process:
-          </p>
-          <ol className="list-decimal">
-            <li><strong>Mathematical Verification:</strong> All calculations, expense ratio models, and compound tables are calculated with reproducible Python scripts and cited against peer-reviewed economic literature.</li>
-            <li><strong>Historical Grounding:</strong> Claims regarding asset class returns, drawdowns, and market behavior are cross-referenced with long-term databases (including CRSP, FRED, and Kenneth French Data Library).</li>
-            <li><strong>Conflict-of-Interest Scrutiny:</strong> Writers do not accept compensation from companies or funds reviewed.</li>
-          </ol>
+            <div className="space-y-6">
+              {Object.values(AUTHORS).map((author) => (
+                <div
+                  key={author.id}
+                  className="p-6 bg-white border border-[#D9D7D0] rounded-lg shadow-xs flex flex-col sm:flex-row items-start gap-4"
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#2E5A44]/15 text-[#2E5A44] flex items-center justify-center font-serif text-lg font-bold shrink-0">
+                    {author.name.charAt(0)}
+                  </div>
+                  <div className="space-y-1.5 flex-1">
+                    <h3 className="text-lg font-serif font-medium text-[#171717]">
+                      <Link to={`/authors/${author.slug}/`} className="hover:text-[#2E5A44] underline underline-offset-2">
+                        {author.name}
+                      </Link>
+                    </h3>
+                    <p className="text-xs text-[#2E5A44] font-medium">{author.role}</p>
+                    <p className="text-xs text-[#66645F] leading-relaxed pt-1">{author.bio}</p>
+                    <div className="pt-2 flex items-center justify-between">
+                      <span className="text-[11px] font-mono text-[#66645F]">
+                        {author.credentials[0]}
+                      </span>
+                      <Link
+                        to={`/authors/${author.slug}/`}
+                        className="text-xs font-semibold text-[#2E5A44] hover:underline inline-flex items-center gap-1"
+                      >
+                        Profile &amp; Articles <ArrowRight size={12} />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
-          <h2>Who Writes Finance Guru</h2>
-          <p>
-            Our essays are authored by experienced chartered financial analysts, behavioral economists, and long-term private practitioners who favor quiet reason over financial punditry.
-          </p>
-          <p>
-            To submit an inquiry, propose an academic collaboration, or report a correction, please visit our{' '}
-            <Link to="/contact" className="text-[#2E5A44] underline underline-offset-4 font-medium">
-              contact page
-            </Link>
-            .
-          </p>
+          {/* Governance Links */}
+          <section className="pt-6 border-t border-[#D9D7D0]">
+            <h2 className="text-xl font-serif font-medium text-[#171717]">Our Editorial Governance</h2>
+            <p className="text-sm text-[#66645F] leading-relaxed">
+              Read our complete four-stage fact-checking protocol in our{' '}
+              <Link to="/editorial-policy/" className="text-[#2E5A44] underline font-medium">
+                Editorial Policy
+              </Link>{' '}
+              and inspect our regulatory boundaries in the{' '}
+              <Link to="/financial-disclaimer/" className="text-[#2E5A44] underline font-medium">
+                Financial Education Notice
+              </Link>.
+            </p>
+          </section>
         </div>
       </main>
     </>

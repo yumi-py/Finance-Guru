@@ -30,9 +30,9 @@ export function ContactPage() {
   return (
     <>
       <SEOHead
-        title="Contact — Finance Guru"
+        title="Contact Finance Guru — Editorial Desk & Inquiries"
         description="Get in touch with the editorial team at Finance Guru for reader feedback, analytical citations, corrections, or inquiries."
-        canonicalPath="/contact"
+        canonicalPath="/contact/"
         schema={contactSchema}
       />
 

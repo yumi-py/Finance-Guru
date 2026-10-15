@@ -1,57 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Primary Hubs -->
   <url>
     <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/blog</loc>
-    <lastmod>2026-10-04</lastmod>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/categories/</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/blog/money-mistakes-finance-professional-sees</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/financial-calculators/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/blog/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 8 Learning Pathways -->
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/personal-finance/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/blog/investment-fees-impact-retirement</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/budgeting-and-saving/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/blog/personal-finance-guide-for-young-adults</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/investing-for-beginners/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/about</loc>
-    <lastmod>2026-10-04</lastmod>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/stocks-and-mutual-funds/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/loans-and-credit-cards/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/insurance/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/tax-education/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/retirement-planning/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Educational Articles -->
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/investing-for-beginners/what-is-compound-interest/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/budgeting-and-saving/how-to-create-a-monthly-budget/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/loans-and-credit-cards/how-do-credit-scores-work/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/personal-finance/money-mistakes-finance-professional-sees/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/stocks-and-mutual-funds/investment-fees-impact-retirement/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/personal-finance/personal-finance-guide-for-young-adults/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/insurance/term-vs-whole-life-insurance/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/tax-education/marginal-vs-effective-tax-rate/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/retirement-planning/how-much-to-retire-4-percent-rule/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Author Profiles -->
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/authors/marcus-vance/</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/contact</loc>
-    <lastmod>2026-10-04</lastmod>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/authors/elena-rodriguez/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/authors/dr-ananya-sen/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/authors/editorial-desk/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal & Standards -->
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/about/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/editorial-policy/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/financial-disclaimer/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/contact/</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/privacy</loc>
-    <lastmod>2026-10-04</lastmod>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/privacy/</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/terms</loc>
-    <lastmod>2026-10-04</lastmod>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/terms/</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-qowgo7orkvzlqgbj7a32o3-472407255379.asia-east1.run.app/sitemap/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
