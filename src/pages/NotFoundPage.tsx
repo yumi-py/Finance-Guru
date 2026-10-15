@@ -8,6 +8,7 @@ export function NotFoundPage() {
       <SEOHead
         title="Page Not Found (404) — Finance Guru"
         description="The requested page could not be located on Finance Guru."
+        noindex={true}
       />
 
       <main className="max-w-3xl mx-auto px-6 py-28 text-center">

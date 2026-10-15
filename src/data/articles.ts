@@ -1282,6 +1282,13 @@ export const ARTICLES: Article[] = [
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
-  const cleanSlug = slug.replace(/^\/+|\/+$/g, '').split('/').pop() || '';
-  return ARTICLES.find((a) => a.slug === cleanSlug || a.slug === slug);
+  if (!slug) return undefined;
+  try {
+    const decoded = decodeURIComponent(slug).trim().toLowerCase();
+    const cleanSlug = decoded.replace(/^\/+|\/+$/g, '').split('/').pop() || '';
+    return ARTICLES.find((a) => a.slug.toLowerCase() === cleanSlug || a.slug.toLowerCase() === decoded);
+  } catch {
+    const cleanSlug = slug.replace(/^\/+|\/+$/g, '').split('/').pop() || '';
+    return ARTICLES.find((a) => a.slug === cleanSlug || a.slug === slug);
+  }
 }

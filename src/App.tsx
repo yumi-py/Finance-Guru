@@ -63,6 +63,15 @@ function AppContent() {
       return <ArticleDetailPage slug={articleSlug} />;
     }
 
+    // Direct /articles and /article routes
+    if (first === 'articles' || first === 'article') {
+      if (segments.length === 1) {
+        return <BlogArchivePage />;
+      }
+      const articleSlug = segments[1];
+      return <ArticleDetailPage slug={articleSlug} />;
+    }
+
     // Author Profiles (/authors/:slug)
     if (first === 'authors' || first === 'author') {
       if (segments.length > 1) {

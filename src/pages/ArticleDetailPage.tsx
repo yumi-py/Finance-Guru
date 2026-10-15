@@ -4,6 +4,7 @@ import { Link } from '../context/RouterContext';
 import { formatDate } from '../utils/date';
 import { SEOHead } from '../components/SEOHead';
 import { FormattedText } from '../components/FormattedText';
+import { NotFoundPage } from './NotFoundPage';
 import { ArrowLeft, Clock, Calendar, ShieldCheck, ExternalLink, Calculator, BookOpen } from 'lucide-react';
 
 interface ArticleDetailPageProps {
@@ -35,28 +36,7 @@ export function ArticleDetailPage({ slug, categorySlug }: ArticleDetailPageProps
   }, [slug]);
 
   if (!article) {
-    return (
-      <main className="max-w-3xl mx-auto px-6 py-24 text-center">
-        <h1 className="text-3xl font-serif font-normal text-[#171717]">Educational Guide Not Found</h1>
-        <p className="mt-4 text-[#66645F]">
-          The article you are looking for may have been moved or updated in our learning index.
-        </p>
-        <div className="mt-8 flex justify-center gap-4">
-          <Link
-            to="/categories/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#2E5A44] underline underline-offset-4"
-          >
-            <ArrowLeft size={16} /> Browse Categories
-          </Link>
-          <Link
-            to="/blog/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#171717] underline underline-offset-4"
-          >
-            View All Guides
-          </Link>
-        </div>
-      </main>
-    );
+    return <NotFoundPage />;
   }
 
   // Related articles
