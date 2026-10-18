@@ -128,6 +128,7 @@ export function ArticleDetailPage({ slug, categorySlug }: ArticleDetailPageProps
         canonicalPath={canonicalPath}
         type="article"
         keywords={[article.primaryKeyword, ...(article.secondaryKeywords || []), ...article.tags].join(', ')}
+        image={article.heroImage?.src}
         schema={schemas}
       />
 
@@ -215,6 +216,33 @@ export function ArticleDetailPage({ slug, categorySlug }: ArticleDetailPageProps
 
         {/* Content Container */}
         <div className="max-w-[760px] mx-auto pt-10">
+          {/* Featured Article Hero Image */}
+          {article.heroImage && (
+            <figure className="mb-10 rounded-lg overflow-hidden border border-[#D9D7D0] bg-[#EFECE6] shadow-xs">
+              <picture className="block w-full">
+                {(article.heroImage.webpSrc || (typeof article.heroImage.src === 'string' && article.heroImage.src.includes('.jpg'))) && (
+                  <source
+                    srcSet={article.heroImage.webpSrc || article.heroImage.src.replace(/\.(jpg|jpeg)$/, '.webp')}
+                    type="image/webp"
+                  />
+                )}
+                <img
+                  src={article.heroImage.src}
+                  alt={article.heroImage.alt}
+                  width={article.heroImage.width || 1200}
+                  height={article.heroImage.height || 675}
+                  className="w-full h-auto aspect-16/9 object-cover block"
+                  loading="eager"
+                />
+              </picture>
+              {article.heroImage.caption && (
+                <figcaption className="p-3 text-center text-xs text-[#66645F] bg-[#FAF9F5] border-t border-[#D9D7D0]/60 font-sans">
+                  {article.heroImage.caption}
+                </figcaption>
+              )}
+            </figure>
+          )}
+
           {/* Table of Contents */}
           {article.tableOfContents && article.tableOfContents.length > 0 && (
             <aside aria-label="Table of contents" className="mb-12 p-6 bg-[#EFECE6]/70 border border-[#D9D7D0] rounded-lg">

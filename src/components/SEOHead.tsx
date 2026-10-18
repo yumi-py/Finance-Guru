@@ -7,6 +7,7 @@ interface SEOHeadProps {
   type?: 'website' | 'article';
   keywords?: string;
   noindex?: boolean;
+  image?: string;
   schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -19,6 +20,7 @@ export function SEOHead({
   type = 'website',
   keywords,
   noindex = false,
+  image,
   schema,
 }: SEOHeadProps) {
   useEffect(() => {
@@ -83,10 +85,16 @@ export function SEOHead({
     updateMeta('property', 'og:type', type);
     updateMeta('property', 'og:site_name', 'Finance Guru');
 
-    // 7. Twitter tags
     updateMeta('name', 'twitter:title', title);
     updateMeta('name', 'twitter:description', description);
     updateMeta('name', 'twitter:card', 'summary_large_image');
+
+    // 7.1 Image tags
+    if (image) {
+      const fullImageUrl = image.startsWith('http') ? image : `${BASE_URL}${image.startsWith('/') ? '' : '/'}${image}`;
+      updateMeta('property', 'og:image', fullImageUrl);
+      updateMeta('name', 'twitter:image', fullImageUrl);
+    }
 
     // 8. JSON-LD structured data
     let scriptJsonLd = document.getElementById('seo-json-ld');

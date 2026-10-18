@@ -1,6 +1,13 @@
 import { Article } from '../types/content';
 import { AUTHORS } from './authors';
 
+import compoundInterestImg from '../assets/images/compound-interest-growth.jpg';
+import compoundInterestWebp from '../assets/images/compound-interest-growth.webp';
+import monthlyBudgetImg from '../assets/images/monthly-budget-planning.jpg';
+import monthlyBudgetWebp from '../assets/images/monthly-budget-planning.webp';
+import creditDebtImg from '../assets/images/credit-debt-management.jpg';
+import creditDebtWebp from '../assets/images/credit-debt-management.webp';
+
 export const ARTICLES: Article[] = [
   {
     id: 'art-compound-interest',
@@ -23,6 +30,14 @@ export const ARTICLES: Article[] = [
     readingTime: '6 min read',
     featured: true,
     jurisdiction: 'Global / Universal',
+    heroImage: {
+      src: compoundInterestImg,
+      webpSrc: compoundInterestWebp,
+      alt: 'Illustration of exponential compound interest growth with a rising green curve and gold coin',
+      caption: 'Compounding works exponentially: personal contributions build the base, after which compound returns accelerate wealth.',
+      width: 1200,
+      height: 675,
+    },
     tableOfContents: [
       { id: 'what-is-compound-interest-q', title: 'What Is Compound Interest?', level: 2 },
       { id: 'how-does-compound-interest-work-q', title: 'How Does Compound Interest Work?', level: 2 },
@@ -223,6 +238,14 @@ export const ARTICLES: Article[] = [
     readingTime: '7 min read',
     featured: true,
     jurisdiction: 'Global / Universal',
+    heroImage: {
+      src: monthlyBudgetImg,
+      webpSrc: monthlyBudgetWebp,
+      alt: 'Top-down view of budgeting with notepad, pen, calculator, and cash expense planning',
+      caption: 'Tracking take-home pay and documenting fixed vs. variable spending is the foundation of monthly cash flow management.',
+      width: 1200,
+      height: 675,
+    },
     tableOfContents: [
       { id: 'what-is-a-monthly-budget-q', title: 'What Is a Monthly Budget and Why Does It Matter?', level: 2 },
       { id: 'how-to-create-budget-step-by-step-q', title: 'How Do You Create a Monthly Budget in 5 Steps?', level: 2 },
@@ -403,6 +426,14 @@ export const ARTICLES: Article[] = [
     readingTime: '8 min read',
     featured: true,
     jurisdiction: 'Global / Universal',
+    heroImage: {
+      src: creditDebtImg,
+      webpSrc: creditDebtWebp,
+      alt: 'Editorial illustration of evaluating credit card statements, loan obligations, and household bills',
+      caption: 'Understanding how credit card utilization and timely loan payments affect your credit score protects your financial standing.',
+      width: 1200,
+      height: 675,
+    },
     tableOfContents: [
       { id: 'what-is-a-credit-score-q', title: 'What Is a Credit Score?', level: 2 },
       { id: 'credit-score-ranges', title: 'Credit Score Ranges & Categories', level: 2 },

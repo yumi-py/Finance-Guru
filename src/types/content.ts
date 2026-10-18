@@ -24,6 +24,7 @@ export interface ExternalReference {
 
 export interface ImageMetadata {
   src: string;
+  webpSrc?: string;
   alt: string;
   caption?: string;
   width?: number;

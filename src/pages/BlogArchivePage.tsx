@@ -138,28 +138,58 @@ export function BlogArchivePage() {
                     <span>{article.readingTime}</span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-serif font-medium text-[#171717] group-hover:text-[#2E5A44] transition-colors leading-snug">
-                    <Link to={`/${article.categorySlug}/${article.slug}/`} className="focus-visible:outline-none">
-                      {article.title}
-                    </Link>
-                  </h2>
+                  <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
+                    <div className="flex-1">
+                      <h2 className="text-2xl sm:text-3xl font-serif font-medium text-[#171717] group-hover:text-[#2E5A44] transition-colors leading-snug">
+                        <Link to={`/${article.categorySlug}/${article.slug}/`} className="focus-visible:outline-none">
+                          {article.title}
+                        </Link>
+                      </h2>
 
-                  <p className="mt-3 text-base text-[#66645F] leading-relaxed max-w-3xl">
-                    {article.excerpt}
-                  </p>
+                      <p className="mt-3 text-base text-[#66645F] leading-relaxed max-w-2xl">
+                        {article.excerpt}
+                      </p>
 
-                  <div className="mt-5 flex items-center justify-between">
-                    <Link
-                      to={`/${article.categorySlug}/${article.slug}/`}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2E5A44] group-hover:translate-x-0.5 transition-transform"
-                    >
-                      <span>Read Guide</span>
-                      <ArrowRight size={14} />
-                    </Link>
+                      <div className="mt-5 flex items-center justify-between">
+                        <Link
+                          to={`/${article.categorySlug}/${article.slug}/`}
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2E5A44] group-hover:translate-x-0.5 transition-transform"
+                        >
+                          <span>Read Guide</span>
+                          <ArrowRight size={14} />
+                        </Link>
 
-                    <div className="text-xs text-[#66645F] hidden sm:block">
-                      By <span className="text-[#171717] font-medium">{article.author.name}</span>
+                        <div className="text-xs text-[#66645F] hidden sm:block">
+                          By <span className="text-[#171717] font-medium">{article.author.name}</span>
+                        </div>
+                      </div>
                     </div>
+
+                    {article.heroImage && (
+                      <Link
+                        to={`/${article.categorySlug}/${article.slug}/`}
+                        className="w-full md:w-52 aspect-16/9 md:aspect-auto md:h-32 shrink-0 rounded-lg overflow-hidden border border-[#D9D7D0] bg-[#EFECE6] block group-hover:border-[#2E5A44]/50 transition-colors shadow-2xs"
+                        tabIndex={-1}
+                        aria-hidden="true"
+                      >
+                        <picture className="block w-full h-full">
+                          {(article.heroImage.webpSrc || (typeof article.heroImage.src === 'string' && article.heroImage.src.includes('.jpg'))) && (
+                            <source
+                              srcSet={article.heroImage.webpSrc || article.heroImage.src.replace(/\.(jpg|jpeg)$/, '.webp')}
+                              type="image/webp"
+                            />
+                          )}
+                          <img
+                            src={article.heroImage.src}
+                            alt={article.heroImage.alt}
+                            width={400}
+                            height={225}
+                            className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300 block"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </Link>
+                    )}
                   </div>
                 </article>
               ))}
